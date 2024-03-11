@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loan Calculator</title>
+<link rel="stylesheet" href="loan-calculator.css">
+</head>
+<body>  
+
+<div id="mainContainer" style="display: flex; column-gap: 80px; max-width:100%; width:100%">
+    <div style="flex: 1.5;">
+        <div style="display: flex; gap: 10px; align-items: center; justify-content: space-between; margin-top: 10px;">
+            <label for="loanAmount">Amount
+            <span id="loanAmountDisplay" style="margin: 0;"></span></label>
+        </div>
+        <div class="input-container">
+            <div class="number-container">
+                <span>50,000</span>
+                <span>2,500,000</span>
+                <span>5,000,000</span>
+            </div>
+            <input type="range" id="loanAmount" name="loanAmount" min="50000" max="5000000" step="50000" value="1000000" />
+            <div id="loanAmountButtons">
+                <button type="button" data-amount="100000">N100,000</button>
+                <button type="button" data-amount="500,000">N500,000</button>
+                <button type="button" data-amount="1000000">N1,000,000</button>
+                <button type="button" data-amount="2000000">N2,000,000</button>
+                <button type="button" data-amount="4000000">N4,000,000</button>
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 10px; align-items: center; justify-content: space-between; margin-top: 20px;">
+            <p><label for="loanDuration">Duration <span id="loanDurationDisplay"></span></label></div><div>
+                <div class="input-container">
+                    <div class="number-container">
+                        <span>1 Month</span>
+                        <span>6 Months</span>
+                        <span>12 Months</span>
+                    </div>
+                    <input type="range" id="loanDuration" name="loanDuration" min="1" max="12" step="1" value="1" />
+                </div>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <p>Loan Breakdown</p>
+            <div class="input-container breakdown-container">
+                <p style ="align-self: flex-start;"><span class="colorIndicator principal"></span> <span style="padding-right:50px;">Principal</span> &nbsp; <span class="colorIndicator interest"></span> Interest</p>
+                <hr> <div id="totalPaymentVisual"></div>
+            </div>
+        </div>
+    </div>
+
+    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center;">
+        <div class="total-payment-container">
+            <p>Total Payment:</p>
+            <span id="totalPayment">N2,556,667</span>
+        </div>        
+        <button id="applyNow" type="button">Apply Now</button>
+    </div>
+</div>
+
+<script src="loan-calculator.js"></script>
+</body>
+</html>

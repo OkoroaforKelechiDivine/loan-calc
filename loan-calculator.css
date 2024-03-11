@@ -1,0 +1,268 @@
+/* Style for the layout and interactive elements */
+div.input-container{
+    background-color: white;
+    border-radius: 35px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-top: 10px;
+	border-width:5px;
+	align-items:center;
+	display:flex;
+    flex-direction: column;
+}
+
+input[type="range"] {
+    accent-color: darkred;
+}
+
+.duration-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input-container.breakdown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 7%;
+    margin-top: 20px;
+    position: relative;
+}
+
+hr {
+    position: absolute;
+    top: 50%; 
+    width: calc(95% - 7%);
+    transform: translateY(-50%); 
+    margin-top: 20px;
+    border: none;
+    height: 5px;
+    background-color: #6D1E3D;
+    border-radius: 40px;
+}
+
+div#loanDurationButtons button, div#loanAmountButtons button {
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+div#loanAmountButtons button {
+	   margin-right: 0px;
+       color: #6B6B6B;
+       border-color: #6B6B6B;
+}
+
+div#loanAmountButtons button:last-child {
+    margin-right: 0px;
+}
+
+div#loanDurationButtons button{
+	margin-right: 0px;
+}
+
+div#loanDurationButtons button:last-child{
+	margin-right: 0px;
+}
+
+div#loanDurationButtons button:hover, #loanAmountButtons button:focus, #loanAmountButtons button:hover, #loanAmountButtons button:focus {
+    background-color: #e0e0e0;
+}
+
+.colorIndicator {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.colorIndicator.principal {
+    background-color: #6D1E3D;
+}
+
+.colorIndicator.interest {
+    background-color: #D8C2CB;
+}
+
+div#totalPaymentVisual {
+    height: 20px;
+    width: 70%;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+	height: 7px;
+}
+
+.paymentSegment.principal {
+    background-color: #6D1E3D;
+    height: 100%;
+}
+
+.paymentSegment.interest {
+    background-color: #D8C2CB;
+    height: 100%;
+}
+
+#applyNow {
+    background-color: #6D1E3D;
+    color: #FFFFFF;
+    padding: 20px 100px;
+    border: none;
+    border-radius: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    align-self: center;
+    margin-top: 10px;
+    width: 50%;
+    box-shadow: 0px 20px 80px 0px #6D1E3D7D;
+}
+
+#applyNow:hover {
+    background-color: #572c49;
+}
+
+.intatba{
+	align-items: center;
+}
+
+input#loanDuration[type="range" i] {
+	width:90%
+}
+
+input#loanAmount[type="range" i] {
+	width:90%;
+    margin-bottom: 30px;
+}
+
+input#loanDuration[type="range" i] {
+	width:90%;
+    margin-bottom: 30px;
+}
+
+.input-container .number-container {
+    display: flex;
+    justify-content: space-between;
+    width: calc(130% - 40px);
+    margin-bottom: 20px;
+}
+
+.input-container .number-container span {
+    flex: 1;
+    text-align: center;
+}
+
+div.input-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 10px;
+    border-width: 5px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.total-payment-container {
+    padding: 20px;
+    background-color: rgba(255, 237, 242, 1);
+    border-radius: 10px;
+    text-align: center;
+    width: 70%;
+    height: 30%;
+    margin-left: 90px;
+    margin-bottom: 30px;
+}
+
+.total-payment-container p {
+    font-size: 24px;
+    color: #572c49;
+    margin-top: 50px;
+}
+
+.total-payment-container span {
+    margin: 0;
+    color: #572c49;
+    font-size: 40px;
+    font-weight: bold; 
+
+}
+
+@media only screen and (max-width: 600px) {
+    #loanAmountButtons button:nth-child(2), #loanAmountButtons button:nth-child(3) {
+        display: none;
+    }
+    
+    .number-container span:nth-child(2) {
+        display: none;
+    }
+
+    #mainContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #mainContainer > div {
+        flex: auto;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    hr {
+        width: calc(89% - 20px); 
+        margin-left: 1px;
+        margin-right: 10px;
+    }
+
+    input[type="range"] {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    #loanAmountButtons, #loanDurationButtons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; 
+    }
+
+    #loanAmountButtons button, #loanDurationButtons button {
+        margin: 5px;
+    }
+
+    #applyNow {
+        width: 100%;
+        box-shadow: 0px 20px 80px 0px #6D1E3D7D;
+    }
+
+   .total-payment-container {
+        padding: 20px;
+        background-color: rgba(255, 237, 242, 1);
+        border-radius: 10px;
+        text-align: center;
+        width: 90%;
+        height: 1%;
+        margin-left: 1%;
+        padding-left: 10px;
+        margin-bottom: 30px;
+    }
+
+    .breakdown-container {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .input-container.breakdown-container {
+        padding-right: 0;
+    }
+}
